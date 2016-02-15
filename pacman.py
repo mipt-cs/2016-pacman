@@ -8,7 +8,7 @@ import random
 def init_window():
     pygame.init()
     pygame.display.set_mode((512, 512))
-    pygame.display.set_caption('Packman')
+    pygame.display.set_caption('Pacman')
 
 
 def draw_background(scr, img=None):
@@ -16,7 +16,7 @@ def draw_background(scr, img=None):
         scr.blit(img, (0, 0))
     else:
         bg = pygame.Surface(scr.get_size())
-        bg.fill((0, 0, 0))
+        bg.fill((128, 128, 128))
         scr.blit(bg, (0, 0))
 
 
@@ -129,7 +129,7 @@ if __name__ == '__main__':
     map_size = 16
     ghost = Ghost(0, 0, tile_size, map_size)
     pacman = Pacman(5, 5, tile_size, map_size)
-    background = pygame.image.load("./resources/background.png")
+    background = None #pygame.image.load("./resources/background.png")
     screen = pygame.display.get_surface()
 
     while 1:
