@@ -132,7 +132,7 @@ if __name__ == '__main__':
     background = None #pygame.image.load("./resources/background.png")
     screen = pygame.display.get_surface()
 
-    while 1:
+    while True:
         process_events(pygame.event.get(), pacman)
         pygame.time.delay(100)
         ghost.game_tick()
